@@ -1,0 +1,231 @@
+body {
+    font-family: "Open-Sans" sans-serif;
+    background-color: #000000;
+}
+.header {
+    height: 8rem;
+    padding: 10px;
+    margin: $margin;
+    gap: 20px;
+    @include flexbox;
+    background-color: #ffffff;
+    box-sizing: border-box;
+
+    .header__logo {
+        @include flexbox;
+        align-items: center;
+
+        img {
+            width: 8rem;
+        }
+        p {
+            font-size: $font-size;
+            font-weight: 700;
+        }
+    }
+    section {
+        display: flex;
+        align-items: center;
+        margin: $margin;
+
+        h2 {
+            font-size: .7rem;
+            font-weight: 600;
+            color: $color;
+            @include ipad {
+                font-size: .5;
+                font-weight: 400;
+            }
+        }
+        p {
+            color: $mainColor;
+            @include ipad {
+                font-size: .5rem;
+            }
+        }
+    }
+}
+.nav {
+    width: 90%;
+    height: 3rem;
+    padding: 10px;
+    margin: $margin;
+    @include flexbox;
+    background-color: #000000;
+    
+    .nav__link {
+        @extend %link;
+        color: $mainColor;
+        @include laptop {
+            font-size: 1.2rem;
+        }
+        @include ipad {
+            font-size: 1rem;
+        }
+
+        img {
+            width: 2rem;
+        }
+    }
+}
+.banner {
+    width: 100%;
+    height: 40rem;
+    padding: 1rem;
+    background-image:url("../img/banner5.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include flexbox;
+    align-items: baseline;
+    @include ipad {
+        width: 100%;
+    }
+
+    div {
+        width: 220%;
+        height: 3rem;
+        background-color: #ff0000;
+        @include laptop {
+            width: 260%;
+        }
+        @include ipad {
+            width: 210%;
+        }
+    }    
+    h1 {
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 4rem;
+        @include laptop {
+            font-weight: 500;
+            font-size: 3rem;
+        }
+        
+    }
+    p {
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 2rem;
+        @include ipad {
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+        @include phone {
+            color: #ffc200;
+        }
+    }
+
+}
+.main {
+    width: 100%;
+    @include grid;
+    box-sizing: border-box;
+    margin: $margin;
+    padding: 5px;
+    gap: 10px;
+    @include phone{
+        width: 70%;
+    }
+
+    .main__form {
+        padding: .5rem;
+        margin: 5px;
+        background-color: rgb(203, 203, 143);
+        border-radius: 20px;
+        display: grid;
+        align-items: center;
+        @include phone {
+            width: 70%;
+        }
+
+        .main__form--button {
+            @extend %button;
+            background-color: rgb(255, 255, 68);
+            @include phone {
+                width: 70%;
+            }
+        }
+    }
+    .main__status {
+        padding: .5rem;
+        margin: 5px;
+    
+        background-color: rgb(157, 236, 210);
+        border-radius: 20px;
+        display: grid;
+        align-items: center;
+        @include phone {
+            width: 70%;
+        }
+
+        .main__status--button {
+            @extend %button;
+            background-color: rgb(7, 251, 251);
+            @include phone {
+                width: 70%;
+            }
+        }
+    }
+    .main__list {
+        padding: .5rem;
+        margin: 5px;
+        
+        background-color: #dc9be1;
+        border-radius: 20px;
+        display: grid;
+        align-items: center;
+        @include phone {
+            width: 70%;
+        }
+
+        .main__list--button {
+            @extend %button;
+            background-color: #e730f4;
+            @include phone {
+                width: 70%;
+            }
+        }
+    }
+}
+.footer {
+    width: 100%;
+    padding: 10px;
+    margin: $margin;
+    gap: 15px;
+    @include grid;
+    justify-items: center;
+    background-color: #dbd1d1;
+
+    .footer__img {
+        width: 10rem;
+    }
+    .footer__nav {
+        @extend %link;
+        @include phone {
+            font-size: 1rem;
+        }
+    }
+    .footer__link {
+        @extend %link;
+        @include ipad {
+            font-size: 1.2rem;
+        }
+    }
+    .footer__button {
+        border-radius: 30px;
+        font-size: 1rem;
+        background-color: rgb(166, 249, 1);
+        font-weight: 400;
+        cursor: pointer;
+    }
+}
+.small {
+    display: grid;
+    width: 100%;
+    background-color: #ffff00;
+    font-size: 1.5rem;
+    @include phone {
+        font-size: 1rem;
+    }
+
+}

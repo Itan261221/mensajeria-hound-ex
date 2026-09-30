@@ -1,0 +1,37 @@
+$mainColor: #6AC6DE;
+$color: #091E3F;
+$font-size: 1rem;
+$margin: 10px;
+
+@mixin flexbox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+@mixin grid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+@mixin laptop {
+    @media  screen and (max-width: 70rem) { @content };
+}
+@mixin ipad {
+    @media  screen and (max-width:50rem) { @content };
+}
+@mixin phone {
+    @media screen and (max-width: 40rem) { @content };
+}
+
+%button {
+    font-size: .8rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+%link {
+    display: flex;
+    text-decoration: none;
+    font-size: 1.5rem;
+    flex-direction: row;
+}
